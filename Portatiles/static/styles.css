@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background: #35b900;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+form input, form button {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilos para el escáner QR */
+#qrScanner {
+    background: #f8f9fa;
+    max-height: 300px;
+}
+
+/* Mejoras en los placeholders */
+input::placeholder {
+    color: #6c757d;
+    opacity: 0.7;
+}
+
+/* Estilos para códigos QR generados */
+.qr-code {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+}
+
+/* Mejoras en la visualización de formularios */
+.card {
+    border-radius: 10px;
+}
+
+.card-body {
+    padding: 2rem;
+}
