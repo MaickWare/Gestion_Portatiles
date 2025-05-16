@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Panel de Control | CDATH{% endblock %}
+{% block content %}
+<div class="container my-4">
+    <h2 class="text-success mb-4">Movimientos Registrados</h2>
+    
+    <div class="d-flex justify-content-end mb-3">
+        <a href="{{ url_for('export_excel') }}" class="btn btn-success me-2">Exportar a Excel</a>
+        <a href="{{ url_for('export_pdf') }}" class="btn btn-success">Exportar a PDF</a>
+    </div>
+    
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead class="table-success">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Marca</th>
+                    <th>Serie</th>
+                    <th>Fecha de Ingreso</th>
+                    <th>Fecha de Salida</th>
+                </tr>
+            </thead>
+            
+        <tbody>
+            {% for mov in movimientos %}
+            <tr>
+                <td>{{ mov.nombre }}</td>
+                <td>{{ mov.marca }}</td>
+                <td>{{ mov.serie }}</td>
+                <td>{{ mov.fecha_ingreso or 'N/A' }}</td>
+                <td>{{ mov.fecha_salida or 'N/A' }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="5" class="text-center">No hay movimientos registrados</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}Inicio | CDATH{% endblock %}
+{% block content %}
+    <main class="container my-4">
+        <!-- Sección de bienvenida -->
+        <section class="text-center mb-5">
+            <h2 class="text-success">¡Bienvenido al Sistema de Control de Portátiles!</h2>
+            <p class="text-muted">Gestiona de manera eficiente el ingreso y salida de portátiles en el Centro de Formación CDATH.</p>
+            <img src="/static/images/gestion_portatiles.jpg" alt="Gestión de Portátiles" class="img-fluid rounded shadow" style="max-width: 80%;">
+        </section>
+
+        <!-- Sección de funcionalidades -->
+        <section class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <img src="/static/images/registro.jpg" class="card-img-top" alt="Registrar Propietario">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">Registrar Propietario</h5>
+                        <p class="card-text">Añade nuevos propietarios al sistema con toda su información personal.</p>
+                        <a href="/registro" class="btn btn-success">Registrar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <img src="/static/images/movimiento.jpg" class="card-img-top" alt="Registro de Movimientos">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">Registro de Movimientos</h5>
+                        <p class="card-text">Controla el ingreso y salida de portátiles de manera sencilla.</p>
+                        <a href="/movimiento" class="btn btn-success">Registrar Movimiento</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <img src="/static/images/panel_control.jpg" class="card-img-top" alt="Panel de Control">
+                    <div class="card-body">
+                        <h5 class="card-title text-success">Panel de Control</h5>
+                        <p class="card-text">Consulta y exporta los movimientos registrados en el sistema.</p>
+                        <a href="/panel" class="btn btn-success">Ir al Panel</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de contacto -->
+        <section class="bg-success text-white text-center py-4 rounded shadow mt-5">
+            <h4>¿Necesitas ayuda?</h4>
+            <p>Contacta con el equipo de soporte del Centro de Formación CDATH.</p>
+            <a href="mailto:soporte@cdath.edu.co" class="btn btn-outline-light">Enviar Correo</a>
+        </section>
+    </main>
+{% endblock %}
